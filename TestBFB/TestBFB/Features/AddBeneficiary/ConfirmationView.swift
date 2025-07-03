@@ -23,9 +23,7 @@ struct ConfirmationView: View {
                     Text("Valider")
                         .frame(maxWidth: .infinity)
                 }
-                .buttonStyle(.borderedProminent)
-                .buttonBorderShape(.capsule)
-                
+                .buttonType(.primaryAction)
                 
                 Button() {
                     retry()
@@ -33,8 +31,7 @@ struct ConfirmationView: View {
                     Text("Recommancer")
                         .frame(maxWidth: .infinity)
                 }
-                .buttonStyle(.bordered)
-                .buttonBorderShape(.capsule)
+                .buttonType(.secondaryAction)
             }
             .padding([.leading, .trailing], 50)
         }

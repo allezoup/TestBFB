@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CameraScanView: View {
+struct IBANPickerView: View {
     @State private var iban: String = ""
     
     let ibanSelected: (String) -> Void
@@ -23,11 +23,5 @@ struct CameraScanView: View {
         .foregroundStyle(.white)
         .navigationTitle("Scanner votre IBAN")
         .toolbarRole(.editor)
-    }
-}
-
-#Preview {
-    CameraScanView() { _ in
-        
     }
 }
