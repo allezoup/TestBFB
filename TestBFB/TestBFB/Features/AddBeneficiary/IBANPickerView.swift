@@ -23,5 +23,7 @@ struct IBANPickerView: View {
         .foregroundStyle(.white)
         .navigationTitle("Scanner votre IBAN")
         .toolbarRole(.editor)
+        .toolbarColorScheme(.dark, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
     }
 }

@@ -7,22 +7,13 @@ struct IBANScannerView: UIViewControllerRepresentable {
     
     var onIBANDetected: ((String) -> Void)
     
-    private let captureSession = AVCaptureSession()
-    
-    func stop() {
-        captureSession.stopRunning()
-    }
-    
-    func start() {
-        captureSession.startRunning()
-    }
-    
     func makeCoordinator() -> Coordinator {
         return Coordinator(self)
     }
     
     func makeUIViewController(context: Context) -> UIViewController {
         let viewController = UIViewController()
+        let captureSession = AVCaptureSession()
         captureSession.sessionPreset = .photo
         
         guard let videoCaptureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else { return viewController }

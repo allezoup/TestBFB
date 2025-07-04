@@ -72,13 +72,15 @@ struct AddBeneficiaryView: View {
                         self.model.iban = iban
                         path = NavigationPath()
                     }
+                    
                 }
             }
             .background(.black)
             .foregroundColor(.white)
 
         }
-        .navigationBarTitleTextColor(.white)
+        .toolbarColorScheme(.dark, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
     }
 }
 
